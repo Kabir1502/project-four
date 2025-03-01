@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='SeattleWeatherVisualization' path='/workbooks' revision='1.4' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='seattle-weather' inline='true' name='federated.185got21rqrhw718fika1126pwsm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='seattle-weather' name='textscan.17yxt6y1binpp21b36kb908hzp5s'>
+            <connection class='textscan' directory='/Users/wisdomchimezie/Desktop/project-four' filename='seattle-weather.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.17yxt6y1binpp21b36kb908hzp5s' name='seattle-weather.csv' table='[seattle-weather#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='real' name='precipitation' ordinal='1' />
+            <column datatype='real' name='temp_max' ordinal='2' />
+            <column datatype='real' name='temp_min' ordinal='3' />
+            <column datatype='real' name='wind' ordinal='4' />
+            <column datatype='string' name='weather' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>precipitation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[precipitation]</local-name>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias>precipitation</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temp_max</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temp_max]</local-name>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias>temp_max</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temp_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temp_min]</local-name>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias>temp_min</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wind</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wind]</local-name>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias>wind</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weather]</local-name>
+            <parent-name>[seattle-weather.csv]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='seattle-weather.csv' datatype='table' name='[__tableau_internal_object_id__].[seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Precipitation' datatype='real' name='[precipitation]' role='measure' type='quantitative' />
+      <column caption='Temp Max' datatype='real' name='[temp_max]' role='measure' type='quantitative' />
+      <column caption='Temp Min' datatype='real' name='[temp_min]' role='measure' type='quantitative' />
+      <column caption='Weather' datatype='string' name='[weather]' role='dimension' type='nominal' />
+      <column caption='Wind' datatype='real' name='[wind]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/mp/1z_l_ynx62v1q3r451k01tq00000gn/T/tableau-temp/#TableauTemp_1md2gbw0fpuusp183b7kx1s6x633.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>seattle-weather.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1461</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>precipitation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[precipitation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>precipitation</remote-alias>
+              <ordinal>1</ordinal>
+              <family>seattle-weather.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temp_max</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temp_max]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>temp_max</remote-alias>
+              <ordinal>2</ordinal>
+              <family>seattle-weather.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>65</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temp_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temp_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>temp_min</remote-alias>
+              <ordinal>3</ordinal>
+              <family>seattle-weather.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wind</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wind</remote-alias>
+              <ordinal>4</ordinal>
+              <family>seattle-weather.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weather</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[weather]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weather</remote-alias>
+              <ordinal>5</ordinal>
+              <family>seattle-weather.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='seattle-weather.csv' id='seattle-weather.csv_A4CACAE62684455C9460F4C0FA9B948F'>
+            <properties context=''>
+              <relation connection='textscan.17yxt6y1binpp21b36kb908hzp5s' name='seattle-weather.csv' table='[seattle-weather#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='real' name='precipitation' ordinal='1' />
+                  <column datatype='real' name='temp_max' ordinal='2' />
+                  <column datatype='real' name='temp_min' ordinal='3' />
+                  <column datatype='real' name='wind' ordinal='4' />
+                  <column datatype='string' name='weather' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='seattle-weather' name='federated.185got21rqrhw718fika1126pwsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.185got21rqrhw718fika1126pwsm'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[temp_max]' derivation='Sum' name='[sum:temp_max:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[temp_min]' derivation='Sum' name='[sum:temp_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Temp Max' datatype='real' name='[temp_max]' role='measure' type='quantitative' />
+            <column caption='Temp Min' datatype='real' name='[temp_min]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.185got21rqrhw718fika1126pwsm].[sum:temp_max:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.185got21rqrhw718fika1126pwsm].[sum:temp_min:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.185got21rqrhw718fika1126pwsm].[sum:temp_min:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.185got21rqrhw718fika1126pwsm].[sum:temp_max:qk] + [federated.185got21rqrhw718fika1126pwsm].[sum:temp_min:qk])</rows>
+        <cols>[federated.185got21rqrhw718fika1126pwsm].[mn:date:ok]</cols>
+      </table>
+      <simple-id uuid='{A9D710F2-24DE-492A-AF38-EA0BB5D7E957}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='seattle-weather' name='federated.185got21rqrhw718fika1126pwsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.185got21rqrhw718fika1126pwsm'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Precipitation' datatype='real' name='[precipitation]' role='measure' type='quantitative' />
+            <column-instance column='[precipitation]' derivation='Sum' name='[sum:precipitation:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.185got21rqrhw718fika1126pwsm].[sum:precipitation:qk]</rows>
+        <cols>[federated.185got21rqrhw718fika1126pwsm].[mn:date:ok]</cols>
+      </table>
+      <simple-id uuid='{FE6B8D79-F6D6-4731-B6EF-B06E8EF11175}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='seattle-weather' name='federated.185got21rqrhw718fika1126pwsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.185got21rqrhw718fika1126pwsm'>
+            <column-instance column='[date]' derivation='Count' name='[cnt:date:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Day' name='[dy:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[weather]' derivation='None' name='[none:weather:nk]' pivot='key' type='nominal' />
+            <column caption='Weather' datatype='string' name='[weather]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.185got21rqrhw718fika1126pwsm].[none:weather:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.185got21rqrhw718fika1126pwsm].[cnt:date:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.185got21rqrhw718fika1126pwsm].[cnt:date:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.185got21rqrhw718fika1126pwsm].[dy:date:ok]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.185got21rqrhw718fika1126pwsm].[yr:date:ok]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.185got21rqrhw718fika1126pwsm].[yr:date:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.185got21rqrhw718fika1126pwsm].[cnt:date:qk]</rows>
+        <cols>[federated.185got21rqrhw718fika1126pwsm].[none:weather:nk]</cols>
+      </table>
+      <simple-id uuid='{69F7E0A6-43ED-41DE-8439-6B4029E4FFF6}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2C939B08-E9D2-4E60-BAC5-138CAC1E959D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97838' id='13' param='vert' type-v2='layout-flow' w='97538' x='1231' y='1081'>
+            <zone h='97838' id='7' param='horz' type-v2='layout-flow' w='97538' x='1231' y='1081'>
+              <zone h='97838' id='5' type-v2='layout-basic' w='88000' x='1231' y='1081'>
+                <zone h='33779' id='3' name='Sheet 1' w='88000' x='1231' y='1081'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='31892' id='9' name='Sheet 2' w='88000' x='1231' y='34860'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='32167' id='10' name='Sheet 3' w='88000' x='1231' y='66752'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='62' h='97838' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='9538' x='89231' y='1081'>
+                <zone h='8784' id='8' name='Sheet 1' pane-specification-id='2' param='[federated.185got21rqrhw718fika1126pwsm].[sum:temp_min:qk]' type-v2='color' w='9538' x='89231' y='1081'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='14324' id='11' name='Sheet 3' pane-specification-id='0' param='[federated.185got21rqrhw718fika1126pwsm].[yr:date:ok]' type-v2='color' w='9538' x='89231' y='9865'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97838' id='18' param='vert' type-v2='layout-flow' w='97538' x='1231' y='1081'>
+                <zone fixed-size='280' h='33779' id='3' is-fixed='true' name='Sheet 1' w='85076' x='1231' y='1081'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8784' id='8' name='Sheet 1' pane-specification-id='2' param='[federated.185got21rqrhw718fika1126pwsm].[sum:temp_min:qk]' type-v2='color' w='12462' x='86307' y='1081'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='266' h='31892' id='9' is-fixed='true' name='Sheet 2' w='85076' x='1231' y='34860'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='269' h='32167' id='10' is-fixed='true' name='Sheet 3' w='85076' x='1231' y='66752'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14324' id='11' name='Sheet 3' pane-specification-id='0' param='[federated.185got21rqrhw718fika1126pwsm].[yr:date:ok]' type-v2='color' w='12462' x='86307' y='9865'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D83A524D-B2C9-4390-991B-C351186CD908}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.185got21rqrhw718fika1126pwsm].[sum:temp_min:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E7231EF9-76F7-4ED9-816F-1B23D13CE99B}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2FF22954-37BD-45AC-8803-B8F0770BC287}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.185got21rqrhw718fika1126pwsm].[yr:date:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F6DC26A9-DC49-498E-AF37-1D4E21CE4796}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CDCB1724-2E63-4AF6-95B4-1AA2541D09ED}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{94D47B99-115B-4E79-9E73-CC26C1B6D6BB}' />
+    </window>
+  </windows>
+</workbook>
